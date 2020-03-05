@@ -15,6 +15,7 @@ namespace Derhansen\FemanagerDmailSubscribe\Controller;
  */
 
 use Derhansen\FemanagerDmailSubscribe\Domain\Repository\DmailCategoryRepository;
+use TYPO3\CMS\Extbase\Annotation as Extbase;
 
 /**
  * Class NewController
@@ -54,8 +55,9 @@ class NewController extends \In2code\Femanager\Controller\NewController
     /**
      * New action
      *
+     * @Extbase\IgnoreValidation("user")
+     *
      * @param \In2code\Femanager\Domain\Model\User $user
-     * @dontvalidate $user
      * @return void
      */
     public function newAction(\In2code\Femanager\Domain\Model\User $user = null)
